@@ -6,4 +6,4 @@ This app runs in the browser and features dynamically updated HTML and CSS power
 
 GitHub Pages URL:
 
-
+https://scarletbowen.github.io/Project-Planner/
