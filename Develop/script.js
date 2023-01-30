@@ -3,26 +3,28 @@
 // in the html.
 $(document).ready(function () {
   
-// tells engine to load 1)html & 2)css first.
+// tells computer to load 1)html & 2)css first.
 // code to display the current date in the header of the page
 
-  var todayDate = dayjs().format('D MMMM YYYY');
-  $("#currentDay").text(todayDate);
+    var todayDate = dayjs().format('D MMMM YYYY');
+    $("#currentDay").text(todayDate);
 
 
-  $(function () {
   // TODO: Add a listener for click events on the save button. 
 
   $(".saveBtn").on("click", function () {
+    console.log(this);
     // Get nearby values of the description in JQuery
     var text = $(this).siblings(".description").val();
+    // picking up change from sibling html description attribute
     var time = $(this).parent().attr("id");
+    // picking up change from parent html id attribute
 
     // Save text in local storage
     localStorage.setItem(time, text);
-  )
+
 })
-}
+
   // This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -30,6 +32,16 @@ $(document).ready(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+    $("#hour8 .description").val(localStorage.getItem("hour8"));
+    $("#hour9 .description").val(localStorage.getItem("hour9"));
+    $("#hour10 .description").val(localStorage.getItem("hour10"));
+    $("#hour11 .description").val(localStorage.getItem("hour11"));
+    $("#hour12 .description").val(localStorage.getItem("hour12"));
+    $("#hour13 .description").val(localStorage.getItem("hour13"));
+    $("#hour14 .description").val(localStorage.getItem("hour14"));
+    $("#hour15 .description").val(localStorage.getItem("hour15"));
+    $("#hour16 .description").val(localStorage.getItem("hour16"));
+    $("#hour17 .description").val(localStorage.getItem("hour17"));
 
 
   // How can Day.js be used to get the current hour in 24-hour time?
